@@ -1,0 +1,2 @@
+使用Write()寫入
+使用WriteString()寫入
