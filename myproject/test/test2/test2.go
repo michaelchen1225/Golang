@@ -1,25 +1,12 @@
-package main
+package main //定義套件名稱為main
 
-import "fmt"
+import (
+	"fmt" //匯入fmt套件
+)
 
-type playerName interface {
-	giveName(n string)
-}
-type player struct {
-	name string
-}
-
-func (p *player) giveName(n string) { //使用指標接收器
-	p.name = n
-}
-
-func goat(p playerName) {
-	fmt.Println(p, "is the greatest of all time.")
-}
-
+var foo string = "bar" //宣告套件範圍變數
+//變數宣告: var  變數名稱  變數型別 = 值
 func main() {
-	p1 := &player{} //要宣告為指標
-	p1.giveName("Michael Jordan")
-	goat(p1)
-	//印出 &{Michael Jordan} is the greatest of all time.
+	var baz string = "qux" //宣告函示範圍變數
+	fmt.Println(foo, baz)  //印出變數
 }
